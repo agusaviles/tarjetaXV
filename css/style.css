@@ -87,11 +87,11 @@
         }
 
         #countdown {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #D4A5A5;
             margin-top: 15px;
             display: flex;
-            gap: 20px;
+            gap: 5px;
         }
         
         .countdown-item {
@@ -99,9 +99,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            width: 100px;
-            height: 100px;
+            font-size: 1.1rem;
+            width: 85px;
+            height: 85px;
             border: 2px solid #D4A5A5;
             border-radius: 50%;
             background-color: #FFFFFF;
