@@ -57,12 +57,6 @@
             color: #FFFFFF;
         }
 
-
-        #section-2, #section-3, #section-4, #section-5, #section-6 {
-            min-height: 70vh;
-            padding: 15px;
-        }
-
         #section-2 {
             display: flex;
             flex-direction: column;
@@ -94,5 +88,5 @@
         
 
         iframe {
-            padding: 20px;
+            padding: 50px;
         }
