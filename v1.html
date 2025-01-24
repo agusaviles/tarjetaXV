@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de 15 Años</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #F4CCCC, #E6B8B7);
+            overflow-x: hidden;
+        }
+
+        .section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #D4A5A5;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .section:nth-child(odd) {
+            background: #FFFFFF;
+        }
+
+        .section:nth-child(even) {
+            background: #F4CCCC;
+            color: #FFFFFF;
+        }
+
+        #section-1 {
+            background: url('img/f10.jpg') no-repeat center center/cover;
+            color: #FFFFFF;
+        }
+
+        #section-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #countdown {
+            font-size: 1.5rem;
+            color: #D4A5A5;
+            margin-top: 15px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const targetDate = new Date("2025-03-10T00:00:00").getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+
+                if (difference > 0) {
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                    document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                } else {
+                    document.getElementById("countdown").textContent = "¡Es el gran día!";
+                    clearInterval(interval);
+                }
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+
+            const sections = document.querySelectorAll(".section");
+
+            function revealSections() {
+                const windowHeight = window.innerHeight;
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < windowHeight - 100) {
+                        section.classList.add("visible");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealSections);
+            revealSections();
+        });
+    </script>
+</head>
+<body>
+    <div class="section" id="section-1">
+        <h1>¡Estás Invitado!</h1>
+        <p>Acompáñanos a celebrar los 15 años de Sofía.</p>
+    </div>
+
+    <div class="section" id="section-2">
+        <h1>Fecha</h1>
+        <p>14 de Marzo de 2025</p>
+        <div id="countdown"></div>
+    </div>
+
+    <div class="section" id="section-3">
+        <h1>Lugar</h1>
+        <p>Salón Las Estrellas, Av. Principal 123, Ciudad.</p>
+    </div>
+
+    <div class="section" id="section-4">
+        <h1>Regalos</h1>
+        <p>Tu presencia es el mejor regalo, pero si deseas obsequiar algo, sugerimos accesorios o libros.</p>
+    </div>
+
+    <div class="section" id="section-5">
+        <h1>Dress Code</h1>
+        <p>Traje formal: Vestidos largos y trajes oscuros.</p>
+    </div>
+</body>
+</html>
