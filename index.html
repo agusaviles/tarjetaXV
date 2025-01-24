@@ -20,7 +20,13 @@
                     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-                    document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    document.getElementById("countdown").innerHTML = `
+                        <div class="countdown-item"><span>${days}</span>días</div>
+                        <div class="countdown-item"><span>${hours}</span>horas</div>
+                        <div class="countdown-item"><span>${minutes}</span>minutos</div>
+                        <div class="countdown-item"><span>${seconds}</span>segundos</div>
+                    `;
+                    
                 } else {
                     document.getElementById("countdown").textContent = "¡Es el gran día!";
                     clearInterval(interval);
@@ -67,11 +73,15 @@
     </div>
 
     <div class="section" id="section-4">
+        <img src="img/gift.svg" alt="regalos icon">
         <h2 class="color1">Regalos</h2>
-        <p>Tu presencia es el mejor regalo, pero si deseas obsequiar algo, sugerimos accesorios o libros.</p>
+        <p>Tu presencia es el mejor regalo, pero si deseas obsequiar algo, aca te dejo mi Alias.</p>
+        <p>Alias: tu.alias.mp</p>
     </div>
 
     <div class="section" id="section-5">
+        <img src="img/woman.svg" alt="mujer icon">
+        <img src="img/man.svg" alt="hombre icon">
         <h2>Dress Code</h2>
         <p>Traje formal: Vestidos largos y trajes oscuros.</p>
     </div>
@@ -79,7 +89,7 @@
     <div class="section" id="section-6">
         <h2 class="color1">Confirmar Asistencia</h2>
         <p>Por favor, confirma tu asistencia al evento.</p>
-        <a id="confirm-button" href="https://ejemplo.com/confirmar" target="_blank">Confirmar</a>
+        <a id="confirm-button" href="https://wa.link/19v2wo" target="_blank">Confirmar</a>
     </div>
     <script src="js/wow.min.js"></script>
     
