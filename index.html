@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de 15 Años</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:wght@100;500&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #F4CCCC, #E6B8B7);
@@ -34,12 +36,14 @@
         }
 
         .section h1 {
+            font-family: 'Crimson Text', serif;
             font-size: 2rem;
             margin-bottom: 15px;
             color: #D4A5A5;
         }
 
         .section p {
+            font-family: 'Roboto', sans-serif;
             font-size: 1.2rem;
             color: #555;
         }
@@ -54,8 +58,13 @@
         }
 
         #section-1 {
-            background: url('img/f8.jpg') no-repeat center center/cover;
+            background: url('img/fondo1.webp') no-repeat center center/cover;
             color: #FFFFFF;
+        }
+
+        #section-2, #section-3, #section-4, #section-5, #section-6 {
+            min-height: 70vh;
+            padding: 15px;
         }
 
         #section-2 {
@@ -68,6 +77,23 @@
             font-size: 1.5rem;
             color: #D4A5A5;
             margin-top: 15px;
+        }
+
+        #confirm-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #FFFFFF;
+            background-color: #D4A5A5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        #confirm-button:hover {
+            background-color: #E6B8B7;
         }
     </style>
     <script>
@@ -136,6 +162,12 @@
     <div class="section" id="section-5">
         <h1>Dress Code</h1>
         <p>Traje formal: Vestidos largos y trajes oscuros.</p>
+    </div>
+
+    <div class="section" id="section-6">
+        <h1>Confirmar Asistencia</h1>
+        <p>Por favor, confirma tu asistencia al evento.</p>
+        <a id="confirm-button" href="https://ejemplo.com/confirmar" target="_blank">Confirmar</a>
     </div>
 </body>
 </html>
