@@ -4,98 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de 15 Años</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:wght@100;500&display=swap');
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #F4CCCC, #E6B8B7);
-            overflow-x: hidden;
-        }
-
-        .section {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-            opacity: 0;
-            transform: translateY(-50px);
-            transition: all 0.8s ease;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section h1 {
-            font-family: 'Crimson Text', serif;
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #D4A5A5;
-        }
-
-        .section p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        .section:nth-child(odd) {
-            background: #FFFFFF;
-        }
-
-        .section:nth-child(even) {
-            background: #F4CCCC;
-            color: #FFFFFF;
-        }
-
-        #section-1 {
-            background: url('img/fondo1.webp') no-repeat center center/cover;
-            color: #FFFFFF;
-        }
-
-        #section-2, #section-3, #section-4, #section-5, #section-6 {
-            min-height: 70vh;
-            padding: 15px;
-        }
-
-        #section-2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #countdown {
-            font-size: 1.5rem;
-            color: #D4A5A5;
-            margin-top: 15px;
-        }
-
-        #confirm-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            color: #FFFFFF;
-            background-color: #D4A5A5;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-        }
-
-        #confirm-button:hover {
-            background-color: #E6B8B7;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const targetDate = new Date("2025-03-10T00:00:00").getTime();
@@ -139,35 +49,42 @@
 </head>
 <body>
     <div class="section" id="section-1">
-        <h1>¡Estás Invitado!</h1>
-        <p>Acompáñanos a celebrar los 15 años de Sofía.</p>
+        <h1>It's<br>time<br>to<br>party!</h1>
     </div>
 
     <div class="section" id="section-2">
-        <h1>Fecha</h1>
+        <h2 class="color1">Fecha</h2>
         <p>14 de Marzo de 2025</p>
         <div id="countdown"></div>
     </div>
 
     <div class="section" id="section-3">
-        <h1>Lugar</h1>
+        <img src="img/ubicacion.svg" alt="ubicacion pin">
+        <h2>Lugar</h2>
         <p>Salón Las Estrellas, Av. Principal 123, Ciudad.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.6166809178126!2d-68.08375632505083!3d-38.95558457171163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a334947a43821%3A0x17e912896dd544b5!2s12%20de%20Septiembre%201585%2C%20Q8302LWS%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1737743319930!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="section" id="section-4">
-        <h1>Regalos</h1>
+        <h2 class="color1">Regalos</h2>
         <p>Tu presencia es el mejor regalo, pero si deseas obsequiar algo, sugerimos accesorios o libros.</p>
     </div>
 
     <div class="section" id="section-5">
-        <h1>Dress Code</h1>
+        <h2>Dress Code</h2>
         <p>Traje formal: Vestidos largos y trajes oscuros.</p>
     </div>
 
     <div class="section" id="section-6">
-        <h1>Confirmar Asistencia</h1>
+        <h2 class="color1">Confirmar Asistencia</h2>
         <p>Por favor, confirma tu asistencia al evento.</p>
         <a id="confirm-button" href="https://ejemplo.com/confirmar" target="_blank">Confirmar</a>
     </div>
+    <script src="js/wow.min.js"></script>
+    
+    <script>
+        new WOW().init();
+    </script>
+
 </body>
 </html>
