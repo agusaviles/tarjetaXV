@@ -9,25 +9,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
     color:#5c4f44;
 }
 
 .welcome-container{
     margin: 0 30px;
-    background-color: rgba(240, 233, 218, 0.5); /* Blanco con 70% de opacidad */
+    background-color: rgba(240, 233, 218, 0.7); /* Blanco con 70% de opacidad */
     padding: 20px;
     border-radius: 10px;
     
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.6em;
     margin-bottom: 20px;
 }
 
 .btn {
+    margin: 10px 0;
     background-color:  #a37c6c;
     color: white;
     padding: 10px 20px;
@@ -43,6 +44,7 @@ h1 {
 }
 p {
     font-size: 1.3em;
+    font-weight: 550;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
