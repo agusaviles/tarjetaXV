@@ -7,52 +7,6 @@
     <link rel="icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const targetDate = new Date("2025-03-10T21:00:00").getTime();
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const difference = targetDate - now;
-
-                if (difference > 0) {
-                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                    document.getElementById("countdown").innerHTML = `
-                        <div class="countdown-item"><span>${days}</span>días</div>
-                        <div class="countdown-item"><span>${hours}</span>horas</div>
-                        <div class="countdown-item"><span>${minutes}</span>minutos</div>
-                        <div class="countdown-item"><span>${seconds}</span>segundos</div>
-                    `;
-                    
-                } else {
-                    document.getElementById("countdown").textContent = "¡Es el gran día!";
-                    clearInterval(interval);
-                }
-            }
-
-            const interval = setInterval(updateCountdown, 1000);
-            updateCountdown();
-
-            const sections = document.querySelectorAll(".section");
-
-            function revealSections() {
-                const windowHeight = window.innerHeight;
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    if (sectionTop < windowHeight - 100) {
-                        section.classList.add("visible");
-                    }
-                });
-            }
-
-            window.addEventListener("scroll", revealSections);
-            revealSections();
-        });
-    </script>
 </head>
 <body>
     <div class="section" id="section-1">
@@ -60,18 +14,18 @@
     </div>  
 
     <div class="section" id="section-2">
-        <img src="img/calendario.svg" alt="calendario icon">
-        <h2 class="color1">Fecha</h2>
-        <p>10 de Marzo de 2025</p>
-        <p>21:00hs</p>
-        <div id="countdown"></div>
+            <img src="img/calendario.svg" alt="calendario icon">
+            <h2 class="color1">Fecha</h2>
+            <p>8 de Marzo de 2025</p>
+            <p>21:00hs</p>
+            <div id="countdown"></div>
     </div>
 
     <div class="section" id="section-3">
         <img src="img/ubicacion.svg" alt="ubicacion pin">
         <h2>Lugar</h2>
-        <p>Salón Las Estrellas, Av. Principal 123, Ciudad.</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.6166809178126!2d-68.08375632505083!3d-38.95558457171163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a334947a43821%3A0x17e912896dd544b5!2s12%20de%20Septiembre%201585%2C%20Q8302LWS%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1737743319930!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Salón Amedea, Perito Moreno 677, Neuquén</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.4967479293605!2d-68.05243952505067!3d-38.95832387171108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a322aebfe6da3%3A0xaa9822283987eacf!2sAmedea!5e0!3m2!1ses-419!2sar!4v1738171281687!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="section" id="section-4">
@@ -91,11 +45,20 @@
     </div>
 
     <div class="section" id="section-6">
+        <img src="img/asistencia.svg" alt="asistencia icon">
         <h2 class="color1">Asistencia</h2>
         <p>Por favor, confirma tu asistencia al evento.</p>
         <a id="confirm-button" href="https://wa.link/19v2wo" target="_blank">Confirmar</a>
     </div>
 
+    <!-- reproductor de musica -->
+    <audio id="audio-player" src="audio.mp3"></audio>
+    <button id="play-pause" class="audio-button">
+        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+    </button>
 
+
+    <script src="js/script.js"></script>
 </body>
 </html>

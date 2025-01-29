@@ -4,7 +4,7 @@
             font-family: 'Crimson Text', serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #F4CCCC, #E6B8B7);
+            background: #FFFFFF;
             overflow-x: hidden;
         }
 
@@ -29,8 +29,7 @@
         }
 
         #section-2, #section-3, #section-4, #section-5, #section-6 {
-            min-height: 70vh;
-            padding: 15px;
+            min-height: 85vh;
         }
 
         .section h1 {
@@ -121,4 +120,34 @@
         .countdown-item span {
             font-size: 1.5rem;
             color: #D4A5A5;
+        }
+
+        img{
+            margin-bottom: 20px;
+        }
+
+        /* reproductor de musica */
+        .audio-button {
+            background-color: #D4A5A5;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .audio-button svg {
+            stroke: white;
+            width: 24px;
+            height: 24px;
+        }
+
+        #play-pause{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
         }
