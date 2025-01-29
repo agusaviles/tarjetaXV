@@ -52,17 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const playIcon = document.getElementById("play-icon");
     const pauseIcon = document.getElementById("pause-icon");
 
-    // Intentar reproducir automáticamente al cargar la página
-    const playAudio = () => {
+    // Agregar evento de interacción para activar el audio en caso de bloqueo
+    const enableAudio = () => {
         audio.play().then(() => {
             playIcon.style.display = "none";
             pauseIcon.style.display = "block";
         }).catch(error => console.warn("La reproducción automática fue bloqueada por el navegador", error));
+        
+        document.removeEventListener("click", enableAudio);
+        document.removeEventListener("scroll", enableAudio);
     };
-
-    // Agregar evento de interacción para activar el audio en caso de bloqueo
-    document.addEventListener("click", playAudio, { once: true });
-    document.addEventListener("scroll", playAudio, { once: true });
+    
+    document.addEventListener("click", enableAudio);
+    document.addEventListener("scroll", enableAudio);
 
     playPauseButton.addEventListener("click", () => {
         if (audio.paused) {
