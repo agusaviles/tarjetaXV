@@ -98,9 +98,7 @@
         #countdown {
             font-size: 1rem;
             color: #D4A5A5;
-            margin-top: 15px;
             display: flex;
-            gap: 5px;
         }
         
         .countdown-item {
