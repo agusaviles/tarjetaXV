@@ -30,15 +30,45 @@
 
         #section-1{
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
+        
+        /* tamaño de la seccion */
         #section-2, #section-4{
             min-height: 70vh;
         }
-        #section-3, #section-5, #section-6 {
+        #section-3, #section-5, #section-6, #section-7{
             min-height: 85vh;
         }
+        #section-8{
+            min-height: 10vh;
+        }
+        
+        /* fondo de la seccion */
+        #section-2, #section-5, #section-7 {
+            background: #FFFFFF;
+            color: #543c39;
+        }
 
+        #section-1, #section-3, #section-6, #section-8{
+            background: url('../img/f9.jpg') no-repeat center center/cover;
+            color: #FFFFFF;
+        }
+
+        #section-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #section-4{
+            background-color: #D4A5A5;
+            color: #FFFFFF;
+        }
+
+        /* titulos */
         .section h1 {
             font-size: 3em;
             color: #FFFFFF;
@@ -64,50 +94,8 @@
             transform: translateY(-30px);
             transition: all 5s ease;
         }
-
-        #section-2, #section-5, #section-7 {
-            background: #FFFFFF;
-            color: #543c39;
-        }
-
-        #section-1, #section-3, #section-6, #section-8{
-            background: url('../img/f9.jpg') no-repeat center center/cover;
-            color: #FFFFFF;
-        }
-
-        #section-1{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #section-2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #section-4{
-            background-color: #D4A5A5;
-            color: #FFFFFF;
-        }
-
-        #section-7{
-            min-width: 25vh;
-        }
         
-
-        #countdown {
-            font-size: 1.5rem;
-            color: #D4A5A5;
-            position: absolute; /* Se coloca en una posición absoluta en relación con el contenedor padre */
-            bottom: 85%; /*Lo coloca justo después de la primera sección */
-            left: 50%; /*Lo centra horizontalmente */
-            transform: translate(-50%, -50%); /*Ajusta la posición exacta al centro */
-            display: flex;
-            gap: 10px;
-        }
-
+        /* boton de confirmar asistencia */
         #confirm-button {
             margin-top: 20px;
             padding: 15px 30px;
@@ -125,10 +113,18 @@
             background-color: #E6B8B7;
         }
 
+        /* contador de dias */
+
         #countdown {
-            font-size: 1rem;
+            font-size: 1.5rem;
             color: #D4A5A5;
+            position: absolute; /* Se coloca en una posición absoluta en relación con el contenedor padre */
+            bottom: 85%; /*Lo coloca justo después de la primera sección */
+            left: 50%; /*Lo centra horizontalmente */
+            transform: translate(-50%, -50%); /*Ajusta la posición exacta al centro */
             display: flex;
+            gap: 10px;
+            color: #D4A5A5;
         }
         
         .countdown-item {
@@ -151,7 +147,7 @@
         }
 
         img{
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
 
         /* reproductor de musica */
