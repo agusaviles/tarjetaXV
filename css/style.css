@@ -35,18 +35,9 @@
             min-height: 85vh;
         }
 
-        .frase{
-            margin: 0 30px;
-            /* background-color: rgba(240, 233, 218, 0.5); Blanco con 70% de opacidad */
-            /* background-color: rgba(231, 220, 214, 0.5); */
-            padding: 40px;
-            border-radius: 10px;
-        }
-
         .section h1 {
             font-size: 3em;
             color: #FFFFFF;
-            /* color:#543c39; */
             font-weight: 600;
         }
 
@@ -70,11 +61,11 @@
             transition: all 5s ease;
         }
 
-        .section:nth-child(even) {
+        #section-2, #section-5, #section-7 {
             background: #FFFFFF;
         }
 
-        #section-1, .section:nth-child(odd) {
+        #section-1, #section-3, #section-6, #section-8{
             background: url('../img/f9.jpg') no-repeat center center/cover;
             color: #FFFFFF;
         }
@@ -91,9 +82,15 @@
             align-items: center;
         }
 
+        #section-4{
+            background-color: #D4A5A5;
+            color: #FFFFFF;
+        }
+
         #section-7{
             min-width: 25vh;
         }
+        
 
         #countdown {
             font-size: 1.5rem;
