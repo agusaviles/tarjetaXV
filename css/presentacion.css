@@ -39,7 +39,7 @@ h1 {
 
 .btn {
     margin: 10px 0;
-    background-color:  #a37c6c;
+    background-color: #543c39;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -50,7 +50,7 @@ h1 {
     transition: 0.3s;
 }
 .btn:hover {
-    background-color:  #bc9c8c ;
+    background-color:  #745b53  ;
 }
 p {
     font-size: 1.3em;

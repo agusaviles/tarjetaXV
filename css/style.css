@@ -98,14 +98,11 @@
         #countdown {
             font-size: 1.5rem;
             color: #D4A5A5;
-
             position: absolute; /* Se coloca en una posición absoluta en relación con el contenedor padre */
-            bottom: 85%; /*Lo coloca justo después de la primera sección */
+            bottom: 90%; /*Lo coloca justo después de la primera sección */
             left: 50%; /*Lo centra horizontalmente */
             transform: translate(-50%, -50%); /*Ajusta la posición exacta al centro */
-            /* border-radius: 15px; */
-            /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-            /* display: flex; */
+            display: flex;
             gap: 10px;
         }
 
